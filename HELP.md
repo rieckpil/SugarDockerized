@@ -60,3 +60,8 @@ libpng warning: iCCP: known incorrect sRGB profile
 ***************         Step "cleanup" OK - 4 seconds
 ***************         SUCCESS!
 ```
+
+
+## Upgrade to v9.0.3
+
+php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-8.0.6-to-9.0.3.zip -l ./silentLog_900.log -s /var/www/html/sugar -u admin -S healthcheck
