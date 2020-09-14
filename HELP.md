@@ -64,4 +64,51 @@ libpng warning: iCCP: known incorrect sRGB profile
 
 ## Upgrade to v9.0.3
 
+```
 php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-8.0.6-to-9.0.3.zip -l ./silentLog_900.log -s /var/www/html/sugar -u admin -S healthcheck
+php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-8.0.6-to-9.0.3.zip -l ./silentLog_900_2.log -s /var/www/html/sugar/ -u admin  
+``` 
+
+output of SilentUpgrade
+```
+php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-8.0.6-to-9.0.3.zip -l ./silentLog_900_2.log -s /var/www/html/sugar/ -u admin                
+***************         Step "unpack" OK - 2 seconds
+Health check passed (green flags). Please refer to the log file /var/www/html/upgrade/upgrade9/silentLog_900_2.log
+
+* Are you sure you want to continue? (Yes/No) Yes
+***************         Step "healthcheck" OK - 38 seconds
+***************         Step "pre" OK - 3 seconds
+***************         Step "commit" OK - 2 seconds
+libpng warning: Interlace handling should be turned on when using png_read_image
+***************         Step "post" OK - 143 seconds
+***************         Step "cleanup" OK - 4 seconds
+***************         SUCCESS!
+```
+
+## Upgrade to v10.0.1
+
+* requirement changes PHP 7.1 to 7.3
+* change Elasticsearch hostname to `sugar-elasticsearch`
+
+```
+php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-9.0.3-to-10.0.1.zip -l ./silentLog_1000.log -s /var/www/html/sugar/ -u admin -S healthcheck
+php CliUpgrader.php -z /var/www/html/upgrade/SugarEnt-Upgrade-9.0.3-to-10.0.1.zip -l ./silentLog_1000.log -s /var/www/html/sugar/ -u admin
+
+```
+
+output of SilentUpgrade
+```
+***************         Step "unpack" OK - 1 second
+Health check passed (green flags). Please refer to the log file /var/www/html/upgrade/upgrade10/silentLog_1000.log
+
+* Are you sure you want to continue? (Yes/No) Yes
+***************         Step "healthcheck" OK - 9 seconds
+***************         Step "pre" OK - 1 second
+***************         Step "commit" OK - 1 second
+libpng warning: Interlace handling should be turned on when using png_read_image
+libpng warning: Interlace handling should be turned on when using png_read_image
+***************         Step "post" OK - 72 seconds
+***************         Step "cleanup" OK - 5 seconds
+***************         SUCCESS!
+
+```
