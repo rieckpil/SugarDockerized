@@ -112,3 +112,15 @@ libpng warning: Interlace handling should be turned on when using png_read_image
 ***************         SUCCESS!
 
 ```
+
+
+## Move to cloud
+
+* Get composer on Docker Web container: https://www.digitalocean.com/community/tutorials/how-to-install-and-use-composer-on-ubuntu-20-04-de
+* ZIP everything: https://support.sugarcrm.com/Resources/Sugar_Cloud_Policy_Guide/#Recommended_Backup_Procedure
+
+``
+ln -s /usr/local/bin/php /usr/bin/php
+composer install --no-dev
+./packager.php --name reoss /var/www/html/sugar/
+``
